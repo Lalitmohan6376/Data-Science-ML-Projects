@@ -1,6 +1,6 @@
 # 🚀 Data Science & Machine Learning projects
 
-Welcome to my Data Science & Machine Learning Portfolio!
+## Welcome to my Data Science & Machine Learning Portfolio!
 
 This repository is a collection of my work in Data Science, Machine Learning, Data Analytics, and Business Intelligence. Here, I share projects that involve working with real-world datasets, extracting meaningful insights, building predictive solutions, and creating interactive visualizations to support data-driven decision-making.
 
