@@ -22,6 +22,7 @@ The objective of these projects is not only to build solutions but also to under
 * Pandas
 * NumPy
 * Jupyter Notebook
+* Scikit-learn
 
 ### 📈 Data Visualization
 
