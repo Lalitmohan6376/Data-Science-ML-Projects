@@ -14,7 +14,7 @@ The objective of these projects is not only to build solutions but also to under
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies-
 
 ### 💻 Programming & Data Analysis
 
