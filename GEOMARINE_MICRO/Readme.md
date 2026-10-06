@@ -1,45 +1,40 @@
 # 🌊 GEOMARINE Micro — Marine Microplastic Data Analysis
 
-A Data Analytics and Exploratory Data Analysis (EDA) project focused on understanding the geographical and temporal distribution of marine microplastic concentration using marine observation data.
+A Data Analytics and Exploratory Data Analysis (EDA) project focused on analyzing marine microplastic concentration using geographical and temporal observation data.
 
-## 🌍 About the Project
+The project uses the **GEOMARINE Microplastic Dataset** to explore how microplastic concentration varies across different locations and sampling dates.
 
-Microplastics are extremely small plastic particles that can be found in marine environments. Their concentration can vary depending on geographical location and sampling time.
+The main focus of this project is **Data Analysis, Data Visualization and Insight Generation**.
 
-The **GEOMARINE Micro** project explores marine microplastic observations using geographical coordinates, sampling dates, and concentration measurements.
+> 🚫 No Machine Learning model is used in this project.
 
-The main purpose of this project is to transform raw environmental data into meaningful visualizations and insights.
+---
 
-This project was developed as a **Data Analyst / Data Analytics project** with a focus on:
+# 🎯 Project Objectives
 
-- 📊 Exploratory Data Analysis
-- 🌍 Geographical Data Analysis
-- 📅 Temporal Data Analysis
-- 📈 Data Visualization
-- 💡 Insight Generation
+The main objectives of this project are:
 
-> 🚫 No Machine Learning model is used in this project. The project focuses completely on Data Analysis and Visualization.
-
-## 🎯 Project Objectives
-
-- 🔍 Explore the GEOMARINE microplastic dataset
-- 🧹 Inspect the dataset for missing values and duplicate records
-- 📅 Analyze sampling dates
-- 🌍 Analyze latitude and longitude information
+- 🔍 Understand the structure of the GEOMARINE microplastic dataset
+- 🧹 Inspect the dataset and its data types
+- 📅 Analyze microplastic observations over time
+- 🌍 Analyze geographical variation using latitude and longitude
 - 📊 Understand the distribution of microplastic concentration
-- 📈 Identify geographical and temporal patterns
-- 💡 Generate meaningful insights from the data
-- 📸 Create clear visualizations for data interpretation
+- 🗺️ Visualize the geographical distribution of sampling locations
+- 💡 Generate meaningful insights from the available data
 
-## 📂 Dataset
+---
 
-The project uses the **GEOMARINE Microplastic Dataset**:
+# 📂 Dataset
+
+The project uses the following dataset:
 
 `GEOMARINE_MICRO.csv`
 
-The dataset contains marine microplastic observations along with their geographical coordinates, sampling dates, and concentration measurements.
+The dataset contains **85 observations** related to marine microplastic measurements.
 
-### 📋 Dataset Columns
+Each observation contains information about the sampling date, geographical coordinates and measured microplastic concentration.
+
+## 📋 Dataset Columns
 
 | Column | Description |
 |---|---|
@@ -47,122 +42,202 @@ The dataset contains marine microplastic observations along with their geographi
 | `Latitude` | Latitude of the sampling location |
 | `Longitude` | Longitude of the sampling location |
 | `MP_conc__particles_cubic_metre_` | Microplastic concentration measured in particles per cubic metre |
-| `Normalized` | Normalized value associated with the microplastic observation |
+| `Normalized` | Normalized value associated with the observation |
 
-### 🎯 Main Measurement
+---
 
-The primary variable analyzed in this project is:
+# 🎯 Main Variable
+
+The primary measurement analyzed in this project is:
 
 `MP_conc__particles_cubic_metre_`
 
-It represents the number of microplastic particles per cubic metre.
+This represents the concentration of microplastic particles measured in **particles per cubic metre**.
 
-## 🛠️ Technologies & Libraries
+---
 
-The project was developed using Python and the following libraries:
+# 🛠️ Technologies & Libraries
+
+The project was developed using:
 
 - 🐍 **Python**
-- 🐼 **Pandas** — Used for loading, cleaning, transforming and analyzing the dataset
+- 🐼 **Pandas** — Used for data loading, cleaning and analysis
 - 🔢 **NumPy** — Used for numerical operations
-- 📊 **Matplotlib** — Used for creating data visualizations
-- 📈 **Seaborn** — Used for exploratory and statistical visualizations
+- 📊 **Matplotlib** — Used for creating all visualizations
 
-## 🔎 Exploratory Data Analysis
+> The visualizations in this project were created using **Matplotlib**.
 
-The dataset was explored to understand its structure, quality and important patterns.
+---
 
-### 🧹 Data Inspection
+# 🔎 Data Analysis
 
-The dataset was checked for:
+Before creating visualizations, the dataset was inspected to understand:
 
-- Missing values
-- Duplicate records
-- Number of rows and columns
+- Number of observations
+- Number of columns
 - Column names
 - Data types
-- Basic statistical information
-
-### 📅 Date Analysis
+- Missing values
+- Duplicate records
+- Statistical characteristics of numerical variables
 
 The `Date` column was converted into a proper datetime format to make temporal analysis easier.
 
-### 🌍 Geographical Analysis
+---
 
-The `Latitude` and `Longitude` columns were used to understand the geographical distribution of the collected observations.
+# 📊 Data Visualizations
 
-# 📊 Data Visualizations & Insights
+Five visualizations were created to understand the geographical distribution, temporal variation and overall distribution of marine microplastic concentration.
+
+---
 
 ## 🌐 1. Latitude vs Microplastic Concentration
 
-This visualization shows how microplastic concentration varies across different latitude values.
+This graph shows the relationship between **Latitude** and **Microplastic Concentration**.
 
 ### 💡 Insights
 
 - Microplastic concentration varies across different latitude locations.
-- Some latitude regions show noticeably higher concentration values.
-- There is no simple linear relationship between latitude and concentration.
+- The concentration values are not evenly distributed across latitude.
+- Some latitude regions contain noticeably higher concentration values than others.
+- The points do not form a clear straight-line pattern.
+- Therefore, latitude alone does not show a simple linear relationship with microplastic concentration.
+
+### 📌 Interpretation
+
+The graph indicates that geographical position represented by latitude may be associated with differences in observed microplastic concentration, but the relationship is not simply linear.
+
+---
 
 ## 🗺️ 2. Longitude vs Microplastic Concentration
 
-This visualization explores the relationship between longitude and microplastic concentration.
+This graph shows how microplastic concentration changes across different **Longitude** values.
 
 ### 💡 Insights
 
 - Microplastic concentration changes across different longitude locations.
-- Some geographical locations show higher concentration values than others.
-- This indicates spatial variation in the observed microplastic levels.
+- Some longitude regions contain higher concentration values than others.
+- The observations are spread across different geographical positions.
+- There is no clear simple linear relationship between longitude and concentration.
+- This indicates spatial variation in the observed microplastic concentration.
 
-## 📅 3. Microplastic Concentration Over Time
+### 📌 Interpretation
 
-This visualization shows how the observed microplastic concentration changes across different sampling dates.
+The concentration of microplastics is not uniform across the geographical area covered by the available observations.
+
+---
+
+## 📈 3. Microplastic Concentration Over Time
+
+This graph shows the variation in microplastic concentration across the available **sampling dates**.
 
 ### 💡 Insights
 
-- Microplastic concentration varies across different sampling dates.
-- Some observations show noticeably higher concentration values.
-- The available data shows temporal variation in observed microplastic concentration.
+- Microplastic concentration changes across different sampling dates.
+- Some observations show relatively higher concentration values.
+- Other observations show comparatively lower concentration values.
+- The concentration does not remain constant throughout the observation period.
+- This indicates temporal variation in the measured microplastic concentration.
+
+### 📌 Interpretation
+
+The available observations suggest that microplastic concentration can vary with sampling time.
+
+However, because the dataset contains only **85 observations**, these variations should be interpreted as patterns in the available sample rather than a definitive long-term seasonal trend.
+
+---
 
 ## 📊 4. Microplastic Concentration Distribution
 
-A histogram is used to understand how the concentration values are distributed across the dataset.
+This histogram shows the distribution of the measured microplastic concentration values.
 
 ### 💡 Insights
 
-- The observations are distributed across different concentration ranges.
-- Most observations fall within a particular concentration range.
-- Some observations have considerably higher concentration values.
+- The observations are spread across different concentration ranges.
+- A larger portion of observations falls within the lower-to-middle concentration ranges.
+- A smaller number of observations have relatively high concentration values.
+- The presence of higher concentration observations shows that the dataset contains variation in microplastic pollution levels.
+- The distribution is not perfectly uniform.
+
+### 📌 Interpretation
+
+Most observations occur within a particular concentration range, while some locations have considerably higher measured microplastic concentrations.
+
+These higher values may represent locations with comparatively greater observed microplastic pollution.
+
+---
 
 ## 🌍 5. Geographical Distribution of Sampling Locations
 
-A latitude-longitude scatter plot is used to visualize where the available observations were collected.
+This graph shows the geographical distribution of the available sampling locations using **Longitude** and **Latitude**.
 
 ### 💡 Insights
 
-- The observations cover multiple geographical locations.
-- The visualization provides an overview of the spatial coverage of the dataset.
-- It helps understand how widely the available sampling locations are distributed.
+- The sampling points are distributed across multiple geographical locations.
+- The observations cover different latitude and longitude coordinates.
+- The graph provides an overview of the spatial coverage of the dataset.
+- Some areas contain observations closer together, while other areas have fewer observations.
+- The available data therefore represents multiple geographical sampling locations rather than a single location.
+
+### 📌 Interpretation
+
+This visualization helps understand where the available marine microplastic samples were collected and provides a basic view of the spatial coverage of the dataset.
+
+---
 
 # 💡 Key Findings
 
-- 🌊 Microplastic concentration varies between different geographical locations.
-- 📍 Some locations show noticeably higher concentrations than others.
-- 📅 Microplastic concentration also changes across different sampling dates.
-- 📊 The dataset contains observations across a range of concentration values.
-- 🌍 Latitude and longitude provide useful information for understanding the spatial distribution of the samples.
+Based on the five visualizations, the following observations were identified:
 
-# 📸 Project Visuals
+### 🌍 Geographical Variation
 
-Multiple visualization images were created as part of the analysis.
+Microplastic concentration varies across different latitude and longitude locations.
 
-The visualizations include:
+This indicates that the observed microplastic concentration is **spatially variable** rather than evenly distributed.
 
-- 🌐 Latitude vs Microplastic Concentration
-- 🗺️ Longitude vs Microplastic Concentration
-- 📅 Microplastic Concentration Over Time
-- 📊 Microplastic Concentration Distribution
-- 🌍 Geographical Distribution of Sampling Locations
+### 📅 Temporal Variation
 
-These visuals make the information in the raw dataset easier to understand and communicate.
+The concentration also changes across different sampling dates.
+
+This suggests that the observed microplastic levels are not constant over time.
+
+### 📊 Concentration Variation
+
+The concentration distribution contains observations across different ranges, including some relatively high concentration values.
+
+This shows that the dataset contains variation in the measured level of marine microplastic contamination.
+
+### 🗺️ Spatial Coverage
+
+The geographical distribution graph shows that the dataset contains samples from multiple geographical locations.
+
+This allows basic spatial exploration of the available observations.
+
+---
+
+# ⚠️ Dataset Limitation
+
+The GEOMARINE dataset contains only **85 observations**.
+
+Therefore, the analysis is useful for **exploratory data analysis and visualization**, but the results should not be treated as a complete representation of global marine microplastic pollution.
+
+The observed patterns describe the available dataset and may change if a larger and more geographically diverse dataset is used.
+
+---
+
+# 📸 Project Visualizations
+
+The following visualizations were created as part of this project:
+
+1. **Latitude vs Microplastic Concentration**
+2. **Longitude vs Microplastic Concentration**
+3. **Microplastic Concentration Distribution**
+4. **Microplastic Concentration Over Time**
+5. **Geographical Distribution of Sampling Locations**
+
+These visualizations help convert the raw numerical data into an easier-to-understand graphical form.
+
+---
 
 # 📁 Project Structure
 
@@ -173,10 +248,10 @@ GEOMARINE-Microplastic-Analysis/
 ├── 📓 GEOMARINE_Microplastic_Analysis.ipynb
 │
 ├── 🖼️ Visualizations/
-│   ├── latitude_vs_concentration.png
-│   ├── longitude_vs_concentration.png
-│   ├── concentration_over_time.png
-│   ├── concentration_distribution.png
-│   └── sampling_locations.png
+│   ├── Latitude vs Microplastic Concentration.png
+│   ├── Longitude vs Microplastic Concentration.png
+│   ├── Microplastic Concentration Distribution.png
+│   ├── Microplastic Concentration Over Time.png
+│   └── Geographical Distribution of Sampling Locations.png
 │
 └── 📄 README.md
